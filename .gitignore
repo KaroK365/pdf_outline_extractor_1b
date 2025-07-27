@@ -1,0 +1,21 @@
+# Python patterns
+*.egg-info/
+dist/
+build/
+*.egg
+
+# system files
+Thumbs.db
+*.tmp
+*~
+
+# Docker 
+.dockerignore
+
+# IDE patterns
+*.swp
+*.swo
+
+# Environment files
+.env
+.env.local
