@@ -4,7 +4,7 @@
 
 set -e
 
-echo "Starting Adobe India H-ackathon 2025 - Round 1A PDF Outline Extractor (Heuristic Only)"
+echo "Starting Adobe India Hackathon 2025 - Round 1B Solution"
 echo "================================================================================="
 
 # Check system resources
@@ -33,17 +33,18 @@ if [ ! -d "/app/output" ]; then
     exit 1
 fi
 
-# Run the extraction
-echo "Starting heuristic-based extraction process..."
-python /app/main.py \
-    --input_dir /app/input \
-    --output_dir /app/output \
-    --verbose
+
+
+
+echo "================================================================================="
+echo "Starting persona-driven analysis..."
+python /app/main.py
+
+
+echo "======================================================"
+echo "Processing complete! Results available in /app/output/"
+
 
 # Check results
 OUTPUT_COUNT=$(find /app/output -name "*.json" 2>/dev/null | wc -l)
 echo "Generated $OUTPUT_COUNT JSON output files"
-
-echo "================================================================================="
-echo "Processing complete! Results available in /app/output/"
-echo "Note: This version uses heuristic-only approach for improved reliability"

@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "input_documents": [
+            "South of France - Cities.pdf",
+            "South of France - Cuisine.pdf",
+            "South of France - History.pdf",
+            "South of France - Restaurants and Hotels.pdf",
+            "South of France - Things to Do.pdf",
+            "South of France - Tips and Tricks.pdf",
+            "South of France - Traditions and Culture.pdf"
+        ],
+        "persona": "Travel Planner",
+        "job_to_be_done": "Plan a 4-day trip for 10 college friends to South of France",
+        "processing_timestamp": "2025-07-27T16:51:10.776680+00:00"
+    },
+    "extracted_sections": [
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Introduction",
+            "importance_rank": 1,
+            "page_number": 1
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Conclusion",
+            "importance_rank": 2,
+            "page_number": 9
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Introduction",
+            "importance_rank": 3,
+            "page_number": 1
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Conclusion",
+            "importance_rank": 4,
+            "page_number": 12
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Family-Friendly Activities",
+            "importance_rank": 5,
+            "page_number": 9
+        }
+    ],
+    "subsection_analysis": [
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "refined_text": "Introduction\nPlanning a trip to the South of France requires thoughtful preparation to ensure a\ncomfortable and enjoyable experience. This guide covers everything from packing essentials\nto travel tips, catering to all seasons and various activities. Whether you're traveling solo, with\nkids, or in a group, this guide will help you make the most of your trip.",
+            "page_number": 1
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "refined_text": "Conclusion\nPacking for a trip to the South of France involves considering the season, planned activities,\nand the needs of both adults and children. By following this comprehensive guide and\nincorporating the tips and tricks provided, you'll be well-prepared for a comfortable and\nenjoyable trip. Remember to pack light, versatile clothing, and essential items to make the\nmost of your travel experience. Bon voyage!",
+            "page_number": 9
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "refined_text": "Introduction\nThe South of France, with its stunning coastline, picturesque villages, and vibrant cities, oﬀers\na wealth of activities and experiences for travelers. Whether you're seeking adventure,\nrelaxation, or cultural enrichment, this region has something for everyone. This guide will\ntake you through a variety of activities and must-see attractions to help you plan an\nunforgettable trip.",
+            "page_number": 1
+        },
+        {
+            "document": "South of France - History.pdf",
+            "refined_text": "Conclusion\nThe South of France oﬀers a rich tapestry of history, culture, and architecture that is sure to\ncaptivate any traveler. From the ancient Roman ruins of Nîmes and Arles to the medieval\nfortresses of Carcassonne and Avignon, each city and town has its own unique story to tell.\nWhether you're exploring the vibrant streets of Marseille, the elegant boulevards of Aix-en-\nProvence, or the charming squares of Montpellier, you'll find a wealth of historical treasures\nwaiting to be discovered. Use this guide to plan your journey through the South of France and\nimmerse yourself in the fascinating history of this beautiful region.",
+            "page_number": 12
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "refined_text": "Family-Friendly Activities\nThe South of France oﬀers a variety of activities that are perfect for families with children:",
+            "page_number": 9
+        }
+    ]
+}

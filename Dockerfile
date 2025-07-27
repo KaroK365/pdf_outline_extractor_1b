@@ -4,7 +4,7 @@ FROM python:3.9-slim
 
 LABEL maintainer="Adobe India Hackathon Team"
 LABEL version="2.0.0"
-LABEL description="PDF Outline Extractor - Heuristic Only Approach"
+LABEL description="Persona-Driven PDF Document Intelligence"
 
 # Set working directory
 WORKDIR /app
@@ -22,6 +22,11 @@ COPY requirements.txt .
 # Install Python dependencies
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
+
+# This makes the model available at /app/models/ inside the container
+RUN mkdir -p /app/models && \
+    python -c "from sentence_transformers import SentenceTransformer; model_name = 'all-MiniLM-L6-v2'; model = SentenceTransformer(model_name); model.save('/app/models/' + model_name)"
+
 
 # Copy source code
 COPY src/ ./src/
@@ -52,6 +57,6 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
 
 # Add metadata
 LABEL org.opencontainers.image.title="PDF Outline Extractor"
-LABEL org.opencontainers.image.description="Heuristic-based PDF outline extraction for Adobe India Hackathon 2025"
+LABEL org.opencontainers.image.description="Persona-Driven PDF Document Intelligence for Adobe India Hackathon 2025"
 LABEL org.opencontainers.image.version="2.0.0"
 LABEL org.opencontainers.image.vendor="Adobe India Hackathon Team"

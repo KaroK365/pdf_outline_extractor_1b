@@ -5,8 +5,10 @@ Performance optimized with caching
 
 import re
 import numpy as np
+import fitz
 from typing import List, Dict, Any, Optional
 from functools import lru_cache
+from typing import List, Optional
 
 # Cached regex patterns for performance
 PATTERNS = {
@@ -286,3 +288,22 @@ def merge_similar_headings(headings: List[Dict[str, Any]], similarity_threshold:
         merged.append(heading)
     
     return merged
+
+
+def get_text_for_section(page: fitz.Page, heading_bbox: List[float], next_heading_bbox: Optional[List[float]] = None) -> str:
+    """
+    Extracts all text on a page that falls vertically between two headings.
+    """
+    # Define the vertical "slice" of the page to extract text from.
+    # Starts from the bottom of the current heading's bounding box.
+    y_start = heading_bbox[3]
+    
+    # Ends at the top of the next heading's bounding box, or the page bottom if it's the last one.
+    y_end = next_heading_bbox[1] if next_heading_bbox else page.rect.height
+
+    # Define the clip rectangle for text extraction
+    clip_rect = fitz.Rect(0, y_start, page.rect.width, y_end)
+    
+    # Extract text only from within that rectangle, sorted by position
+    text = page.get_text(clip=clip_rect, sort=True)
+    return text.strip()
